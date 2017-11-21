@@ -1,0 +1,4 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>database
+CREATE DATABASE meta;
+CREATE USER 'respiratory'@'localhost' IDENTIFIED BY 'test';
+GRANT ALL PRIVILEGES ON meta.* TO 'respiratory'@'localhost' IDENTIFIED BY 'test';

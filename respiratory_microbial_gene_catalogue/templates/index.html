@@ -1,0 +1,1444 @@
+
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Respiratory Microbial Gene Catalogue</title>
+
+    <!-- Essential styles -->
+    <!-- <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/bootstrap/css/bootstrap.min.css" type="text/css"> -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/font-awesome/css/font-awesome.min.css" type="text/css"> 
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/fancybox/jquery.fancybox.css?v=2.1.5" media="screen"> 
+     
+    <!-- Boomerang styles -->
+        <link id="wpStylesheet" type="text/css" href="/static/respiratory_microbial_gene_catalogue/css/global-style.css" rel="stylesheet" media="screen">
+        
+
+    <!-- Favicon -->
+    <link href="/static/respiratory_microbial_gene_catalogue/images/favicon.png" rel="icon" type="image/png">
+
+    <!-- Assets -->
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/css/sky-forms.css">    
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="assets/sky-forms/css/sky-forms-ie8.css">
+    <![endif]-->
+
+    <!-- Required JS -->
+    <script src="/static/respiratory_microbial_gene_catalogue/js/jquery.js"></script>
+    <script src="/static/respiratory_microbial_gene_catalogue/js/jquery-ui.min.js"></script>
+
+    <!-- Page scripts -->
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/layerslider/css/layerslider.css" type="text/css">
+
+</head>
+<body class="body-wrap body-boxed body-bg-3">
+<!-- MODALS -->
+
+<!-- MOBILE MENU - Option 2 -->
+<section id="navMobile" class="aside-menu left">
+    <form class="form-horizontal form-search">
+        <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+                <button id="btnHideMobileNav" class="btn btn-close" type="button" title="Hide sidebar"><i class="fa fa-times"></i></button>
+            </span>
+        </div>
+    </form>
+    <div id="dl-menu" class="dl-menuwrapper">
+        <ul class="dl-menu"></ul>
+    </div>
+</section> 
+
+<!-- SLIDEBAR -->
+<section id="asideMenu" class="aside-menu right">
+    <form class="form-horizontal form-search">
+        <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search..." />
+            <span class="input-group-btn">
+                <button id="btnHideAsideMenu" class="btn btn-close" type="button" title="Hide sidebar"><i class="fa fa-times"></i></button>
+            </span>
+        </div>
+    </form>
+    
+    <h5 class="side-section-title">Optional sidebar menu</h5>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About us</a>
+            </li>
+            <li>
+                <a href="#">Blog</a>
+            </li>
+            <li>
+                <a href="#">Work</a>
+            </li>
+            <li>
+                <a href="#">Online shop</a>
+            </li>
+        </ul>
+    </div>
+    
+    <h5 class="side-section-title">Social media</h5>
+    <div class="social-media">
+        <a href="#"><i class="fa fa-facebook facebook"></i></a>
+        <a href="#"><i class="fa fa-google-plus google"></i></a>
+        <a href="#"><i class="fa fa-twitter twitter"></i></a>
+    </div>
+    
+    <h5 class="side-section-title">Contact information</h5>
+    <div class="contact-info">
+        <h5>Address</h5>
+        <p>5th Avenue, New York - United States</p>
+        
+        <h5>Email</h5>
+        <p>hello@webpixels.ro</p>
+        
+        <h5>Phone</h5>
+        <p>+10 724 1234 567</p>
+    </div>
+</section>
+
+<!-- MAIN WRAPPER -->
+<div class="body-wrap">
+    <!-- This section is only for demonstration purpose only. Check out the docs for more informations" -->
+<!--     <div id="divStyleSwitcher" class="style-switcher-slidebar">
+    <a href="#" id="cmdShowStyleSwitcher" class="open-panel hidden-xs"><i class="fa fa-cog"></i></a>
+    <div class="switch-panel">
+        <h3>Boomerang - Style Builder</h3>
+        <div class="panel-section">
+            <h4 class="title text-uppercase font-normal">Layout options</h4>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>I prefer it:</label> 
+                        <select id="cmbLayoutStyle" class="form-control">
+                            <option value="1">Fluid</option>
+                            <option value="2">Boxed</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label></label>
+                        <select id="cmbLayoutColor" class="form-control">
+                            <option value="1">Light</option>
+                            <option value="2">Dark</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <label class="mt-10">Predefined body backgrounds</label>
+            <span class="clearfix"></span>
+            <span id="cmbBodyBg" class="color-switch">
+                <a href="#" id="cmdBodyBg1" class="body-bg-1 ttip" data-toggle="bottom" title="Solid color"></a>
+                <a href="#" id="cmdBodyBg2" class="body-bg-2 ttip" data-toggle="bottom" title="Black Lozenge"></a>
+                <a href="#" id="cmdBodyBg3" class="body-bg-3 ttip" data-toggle="bottom" title="Squairy Light"></a>
+                <a href="#" id="cmdBodyBg4" class="body-bg-4 ttip" data-toggle="bottom" title="Dark Dotted"></a>
+                <a href="#" id="cmdBodyBg5" class="body-bg-5 ttip" data-toggle="bottom" title="Skulls"></a>
+                <a href="#" id="cmdBodyBg6" class="body-bg-6 ttip" data-toggle="bottom" title="Image Background - 1"></a>
+                <a href="#" id="cmdBodyBg7" class="body-bg-7 ttip" data-toggle="bottom" title="Image Background - 2"></a>
+                <span class="clearfix"></span>
+            </span>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>Section title:</label>
+                        <select id="cmbSectionTitleStyle" class="form-control">
+                            <option value="1">Style 1</option>
+                            <option value="2">Style 2</option>
+                            <option value="3">Style 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>Color:</label>
+                        <select id="cmbSectionTitleColor" class="form-control" disabled="disabled">
+                            <option value="1">Base</option>
+                            <option value="2">Alt Base</option>
+                            <option value="3">Light</option>
+                            <option value="4">Dark</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+        <hr> 
+
+        <div class="panel-section">
+            <h4 class="title text-uppercase font-normal">Header options</h4> 
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>Header:</label>
+                        <select id="cmbHeaderStyle" class="form-control">
+                            <option value="2">Header 1: Default navbar</option>
+                            <option value="3">Header 2: Default navbar + Top header</option>
+                            <option value="1">Header 3: Header + Navbar</option>
+                            <option value="4">Header 4: Cover</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>Top header color:</label>
+                        <select id="cmbTopHeaderColor" class="form-control" disabled="disabled">
+                            <option value="1">Light</option>
+                            <option value="2">Dark</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>     
+
+        <div class="panel-section">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>Nav shadow</label>
+                        <select id="cmbNavShadow" class="form-control">
+                            <option value="1">No</option>
+                            <option value="2">Yes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <label>Dropdown arrow:</label>
+                        <select id="cmbNavDropdownArrow" class="form-control">
+                            <option value="2">Yes</option>
+                            <option value="1">No</option>
+                        </select>
+                    </div>
+                </div>          
+            </div>
+        </div>   
+
+        <hr>
+
+        <div class="panel-section">
+            <h4 class="title text-uppercase font-normal">Color options</h4>
+
+            <label>Predefined colors</label>
+            <span class="clearfix"></span>
+            <span class="color-switch">
+                <a href="#" id="cmdSchemeRed" class="color-red" title="Red">Red</a>
+                <a href="#" id="cmdSchemeViolet" class="color-violet" title="Violet">Violet</a>
+                <a href="#" id="cmdSchemeBlue" class="color-blue" title="Blue">Blue</a>
+                <a href="#" id="cmdSchemeGreen" class="color-green" title="Green">Green</a>
+                <a href="#" id="cmdSchemeYellow" class="color-yellow" title="Yellow">Yellow</a>
+                <a href="#" id="cmdSchemeOrange" class="color-orange" title="Orange">Orange</a>
+            </span>
+        </div>
+
+        <hr>
+
+        <div class="panel-section">
+            <h4 class="title">
+                <span class="text-uppercase font-normal">Special</span> 
+                <a href="#" class="pop" title="About customization" data-content="We created some examples that show you the multitude of options you have so you make this template as you wish. <br><br>Customization is very easy and it is made in only one file.">
+                    <i class="fa fa-question-circle"></i>
+                </a>
+                <label class="badge base pull-right">New</label>
+            </h4>
+
+            <label>Predefined schemes</label>
+            <span class="clearfix"></span>
+            <span class="color-switch">
+                <a href="#" id="cmdSchemeBW" class="color-bw ttip" data-toggle="top" title="Black & White">Black and white</a>
+                <a href="#" id="cmdSchemeDark" class="color-dark ttip" data-toggle="top" title="Dark">Dark</a>
+                <a href="#" id="cmdSchemeFlat" class="color-flat ttip" data-toggle="top" title="Flat">Flat</a>
+            </span>
+
+        </div>
+
+        <div class="panel-section mt-15 hide">
+            <a href="#"><span>Reset all applied styles</span></a>
+            <br><br>
+        </div>
+
+    </div>
+</div> -->
+            <!-- HEADER -->
+        <div id="divHeaderWrapper">
+            <header class="header-standard-2">     
+    <!-- MAIN NAV -->
+    <div class="navbar navbar-wp navbar-arrow mega-nav" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle navbar-toggle-aside-menu">
+                    <i class="fa fa-outdent icon-custom"></i>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars icon-custom"></i>
+                </button>
+
+                <a class="navbar-brand" href="/" title="Boomerang | One template. Infinite solutions">
+                    <img src="/static/respiratory_microbial_gene_catalogue/images/meta.png" alt="Boomerang | One template. Infinite solutions">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a href="/">Home</a>
+                    </li>
+                    <li >
+                        <a href="/data-tools">Pages</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Real Estate</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="homepage-estate-1.html">Homepage</a></li>
+                                    <li><a tabindex="-1" href="estate-listing-1.html">Listing: List </a></li>
+                                    <li><a tabindex="-1" href="estate-listing-2.html">Listing: Grid</a></li>
+                                    <li><a tabindex="-1" href="estate-property.html">Property</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Jobs</a>
+                                <ul class="dropdown-menu">
+                                    <li><a tabindex="-1" href="homepage-jobs-1.html">Homepage</a></li>
+                                    <li><a tabindex="-1" href="jobs-listing-1.html">Jobs listing</a></li>
+                                    <li><a tabindex="-1" href="job-description-1.html">Job description</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">Magazine &amp; Newspaper</a>
+                                <ul class="dropdown-menu">
+                                    <li class="divider">Magazine</li>
+                                    <li><a tabindex="-1" href="homepage-magazine-1.html">Homepage</a></li>
+                                    <li><a tabindex="-1" href="magazine-listing-1.html">Category listing: List</a></li>
+                                    <li><a tabindex="-1" href="magazine-listing-2.html">Category listing: Grid</a></li>
+                                    <li><a tabindex="-1" href="magazine-article-1.html">Magazine article</a></li>
+                                    <li class="divider">Newspaper</li>
+                                    <li><a tabindex="-1" href="homepage-newspaper-1.html">Newspaper homepage</a></li>
+                                    <li><a tabindex="-1" href="newspaper-listing-1.html">Newspaper listing: List</a></li>
+                                    <li><a tabindex="-1" href="newspaper-listing-2.html">Newspaper listing: Grid</a></li>
+                                    <li><a tabindex="-1" href="magazine-article-1.html">Newspaper article</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+               
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</header>        </div>
+
+        <!-- Optional header components (ex: slider) -->
+            <!-- Importing slider content -->
+    <section id="slider-wrapper" class="layer-slider-wrapper layer-slider-dynamic">
+    <div id="layerslider" style="width:100%;height:520px;"> 
+        <!-- Slide 1 -->
+        <div class="ls-slide" >
+            <!-- slide background -->
+            <img src="/static/respiratory_microbial_gene_catalogue/images/backgrounds/full-bg-7.jpg" class="ls-bg" alt="Slide background"/>
+            
+            <!-- Left Text -->
+            <h3 class="ls-l title-lg c-white text-shadow text-uppercase text-center strong" style="width:100%; top:25%; left:50%;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
+                Welcome to Boomerang
+            </h3>
+<!--            <h3 class="ls-l title c-white text-wrapped black text-uppercase text-center strong" style="top:50%; left:50%;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:1000;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
+                Vision.Believe.Success
+            </h3> -->
+ 
+            <h3 class="ls-l title-xs c-white text-shadow text-uppercase text-center strong" style="width:100%; top:50%; left:50%;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:1000;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
+                Start the tour
+            </h3>
+        </div>
+    </div>
+</section>
+
+    
+
+    <section class="slice white inset-shadow-1 bb">
+        <div class="wp-section">
+            <div class="container">   
+                <div class="section-title-wr">
+                    <h3 class="section-title left"><span>Introduction</span></h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <p>
+                            Imbalanced respiratory microbiota have been demonstrated in pediatric pneumonia(PP), representing the most important causes of morbidity and mortality in Chinese children. 
+                            <br><br>
+                            Here, we construct an integrated respiratory microbial gene catalogue(RMGC) based on metagenomic sequencing data of 334 respiratory samples in 171 healthy and 76 pneumonia children, as well as published respiratory bacterial genomes and small-sized RMGC in Human Microbiome Project(HMP). We also provide an easily accessible database to facilitate the utilization of the catalogue, including free download of the gene sets and online analysis pipeline. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slice light-gray bb">
+        <div class="wp-section">
+            <div class="container">
+                <div class="section-title-wr">
+                    <h3 class="section-title left"><span>Data summary</span></h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>#ORFs</th>
+                                    <th>Total length (bp)</th>
+                                    <th>Average length (bp)</th>
+                                    <th>Max length</th>
+                                    <th>Min length</th>
+                                    <th>% of genes assigned to a phylum</th>
+                                    <th>% of genes assigned to a genus</th>
+                                    <th>% of genes assigned to a species</th>
+                                    <th>% of genes with KO annotation</th>
+                                    <th>% annotated on eggNOG</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <td>2,245,343</td>
+                                    <td>1,708,322,497</td>
+                                    <td>760</td>
+                                    <td>32,241</td>
+                                    <td>100</td>
+                                    <td>57.08%</td>
+                                    <td>50.92%</td>         
+                                    <td>27.52%</td>
+                                    <td>38.01%</td>
+                                    <td>46.04%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+<!--                     <div class="col-lg-3 col-md-6">
+                        <div class="wp-block hero white no-margin">
+                            <div class="thmb-img">
+                                <i class="fa fa-lightbulb-o"></i>
+                            </div>
+                            
+                            <h2>Generating ideas</h2>
+                            <p class="text-center">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum. </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="wp-block hero white no-margin">
+                            <div class="thmb-img">
+                                <i class="fa fa-keyboard-o"></i>
+                            </div>
+                            
+                            <h2>Prototype model</h2>
+                            <p class="text-center">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum. </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="wp-block hero white no-margin">
+                            <div class="thmb-img">
+                                <i class="fa fa-code"></i>
+                            </div>
+                            
+                            <h2>Design and Code</h2>
+                            <p class="text-center">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum. </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6">
+                        <div class="wp-block hero white no-margin">
+                            <div class="thmb-img">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+                            
+                            <h2>Launching and Monitoring</h2>
+                            <p class="text-center">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum. </p>
+                        </div>
+                    </div> -->
+                        
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="slice p-15 base">
+        <div class="cta-wr">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h1 class="text-normal">
+                            <strong>Metagenomic analysis.</strong> Well done is better than well said. Wanna know why?
+                        </h1>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="#" class="btn btn-lg btn-b-white btn-icon btn-icon-right btn-check pull-right">
+                            <span>Try me now</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="slice bg-white bb">
+        <div class="wp-section">
+            <div class="container">
+                <div class="section-title-wr">
+                    <h3 class="section-title left"><span>Microbiome composition</span></h3>
+                </div>
+                <!-- op -->
+                <div class="row">
+                    <div class="tabs-framed">
+                        <ul class="tabs clearfix">
+                            <li class="active"><a href="#Phylum_op" data-toggle="tab">Phylum</a></li>
+                            <li class=""><a href="#Genus_op" data-toggle="tab">Genus</a></li>
+                            <li class=""><a href="#Species_op" data-toggle="tab">Species</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- Tab 1 -->
+                            <div class="tab-pane fade active in" id="Phylum_op">
+                                <div class="tab-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <br><br><br><br>
+                                            <div id="Phylum_op_pie">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phylum</th>
+                                                        <th>Relative abundance(%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Firmicutes</td>
+                                                        <td>29.9228</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Unclassified</td>
+                                                        <td>23.0920</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Bacteroidetes</td>
+                                                        <td>21.9115</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Proteobacteria</td>
+                                                        <td>12.5073</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Actinobacteria</td>
+                                                        <td>9.4388</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Fusobacteria</td>
+                                                        <td>3.0082</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Tenericutes</td>
+                                                        <td>0.0686</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Spirochaetes</td>
+                                                        <td>0.0398</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Candidatus Saccharibacteria</td>
+                                                        <td>0.0094</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Cyanobacteria</td>
+                                                        <td>0.0004</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Nitrospirae</td>
+                                                        <td>0.0002</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Deinococcus-Thermus</td>
+                                                        <td>0.0001</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Chlorobi</td>
+                                                        <td>0.0001</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Synergistetes</td>
+                                                        <td>0.0001</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Chlamydiae</td>
+                                                        <td>0.0001</td>
+                                                    </tr>   
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab 2 -->
+                            <div class="tab-pane fade" id="Genus_op">
+                                <div class="tab-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <br><br><br><br>
+                                            <div id="Genus_op_pie">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phylum</th>
+                                                        <th>Relative abundance(%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Unclassified</td>
+                                                        <td>28.4830</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Prevotella</td>
+                                                        <td>18.7926</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Streptococcus</td>
+                                                        <td>13.2282</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Veillonella</td>
+                                                        <td>5.8526</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Neisseria</td>
+                                                        <td>5.5187</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Rothia</td>
+                                                        <td>3.5913</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Actinomyces</td>
+                                                        <td>3.2882</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Staphylococcus</td>
+                                                        <td>2.6362</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Haemophilus</td>
+                                                        <td>2.3148</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Leptotrichia</td>
+                                                        <td>1.4989</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Peptoniphilus</td>
+                                                        <td>1.2330</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Acinetobacter</td>
+                                                        <td>1.1911</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Granulicatella</td>
+                                                        <td>1.1634</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Fusobacterium</td>
+                                                        <td>1.1000</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Atopobium</td>
+                                                        <td>0.8463</td>
+                                                    </tr>   
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab 3 -->
+                            <div class="tab-pane fade" id="Species_op">
+                                <div class="tab-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <br><br><br><br>
+                                            <div id="Species_op_pie">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phylum</th>
+                                                        <th>Relative abundance(%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Unclassified</td>
+                                                        <td>55.5028</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Prevotella melaninogenica</td>
+                                                        <td>3.50319</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Prevotella histicola</td>
+                                                        <td>2.5744</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Prevotella sp.</td>
+                                                        <td>2.35983</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Rothia mucilaginosa</td>
+                                                        <td>2.13796</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Streptococcus parasanguinis</td>
+                                                        <td>1.95179</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Prevotella pallens</td>
+                                                        <td>1.80462</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Streptococcus sp.</td>
+                                                        <td>1.78913</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Staphylococcus aureus</td>
+                                                        <td>1.63875</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Neisseria subflava</td>
+                                                        <td>1.28294</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Veillonella atypica</td>
+                                                        <td>1.27725</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Streptococcus pseudopneumoniae</td>
+                                                        <td>1.1943</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Neisseria flavescens</td>
+                                                        <td>1.09725</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Prevotella salivae</td>
+                                                        <td>0.858959</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Acinetobacter baumannii</td>
+                                                        <td>0.753785</td>
+                                                    </tr>   
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- np -->
+                <br>
+                <div class="row">
+                    <div class="tabs-framed">
+                        <ul class="tabs clearfix">
+                            <li class="active"><a href="#Phylum_np" data-toggle="tab">Phylum</a></li>
+                            <li class=""><a href="#Genus_np" data-toggle="tab">Genus</a></li>
+                            <li class=""><a href="#Species_np" data-toggle="tab">Species</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- Tab 1 -->
+                            <div class="tab-pane fade active in" id="Phylum_np">
+                                <div class="tab-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <br><br>
+                                            <div id="Phylum_np_pie">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phylum</th>
+                                                        <th>Relative abundance(%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Firmicutes</td>
+                                                        <td>56.4767</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Proteobacteria</td>
+                                                        <td>21.1863</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Unclassified</td>
+                                                        <td>10.9035</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Actinobacteria</td>
+                                                        <td>5.5105</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Bacteroidetes</td>
+                                                        <td>5.4922</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Tenericutes</td>
+                                                        <td>0.3619</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Fusobacteria</td>
+                                                        <td>0.0637</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Spirochaetes</td>
+                                                        <td>0.0024</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Deinococcus-Thermus</td>
+                                                        <td>0.0017</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Cyanobacteria</td>
+                                                        <td>0.0004</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Candidatus_Saccharibacteria</td>
+                                                        <td>0.0003</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Synergistetes</td>
+                                                        <td>0.0002</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Verrucomicrobia</td>
+                                                        <td>0.0001</td>
+                                                    </tr>                                                       
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab 2 -->
+                            <div class="tab-pane fade" id="Genus_np">
+                                <div class="tab-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <br><br><br><br>
+                                            <div id="Genus_np_pie">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phylum</th>
+                                                        <th>Relative abundance(%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Staphylococcus</td>
+                                                        <td>45.9709</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Acinetobacter</td>
+                                                        <td>15.9561</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Unclassified</td>
+                                                        <td>10.2326</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Streptococcus</td>
+                                                        <td>5.3611</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Corynebacterium</td>
+                                                        <td>4.0519</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Bacteroides</td>
+                                                        <td>3.3639</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Mastadenovirus</td>
+                                                        <td>2.7745</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Prevotella</td>
+                                                        <td>1.4743</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Blautia</td>
+                                                        <td>1.1702</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Ralstonia</td>
+                                                        <td>0.9084</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Haemophilus</td>
+                                                        <td>0.7787</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Klebsiella</td>
+                                                        <td>0.7625</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Veillonella</td>
+                                                        <td>0.7130</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Escherichia</td>
+                                                        <td>0.6237</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Dolosigranulum</td>
+                                                        <td>0.4774</td>
+                                                    </tr>   
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab 3 -->
+                            <div class="tab-pane fade" id="Species_np">
+                                <div class="tab-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <br><br><br><br>
+                                            <div id="Species_np_pie">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phylum</th>
+                                                        <th>Relative abundance(%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Staphylococcus aureus</td>
+                                                        <td>27.8951</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Unclassified</td>
+                                                        <td>19.3576</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Staphylococcus epidermidis</td>
+                                                        <td>7.6282</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Staphylococcus haemolyticus</td>
+                                                        <td>5.1094</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Acinetobacter sp. DUT-2</td>
+                                                        <td>3.7700</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Acinetobacter calcoaceticus</td>
+                                                        <td>3.3158</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Acinetobacter baumannii</td>
+                                                        <td>3.1810</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Acinetobacter pittii</td>
+                                                        <td>2.8416</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Bacteroides vulgatus</td>
+                                                        <td>2.0428</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Human mastadenovirus B</td>
+                                                        <td>1.9342</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Corynebacterium accolens</td>
+                                                        <td>1.9174</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Streptococcus pneumoniae</td>
+                                                        <td>1.6433</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>[Ruminococcus] gnavus</td>
+                                                        <td>1.0971</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Staphylococcus hominis</td>
+                                                        <td>1.0664</td>
+                                                    </tr>   
+                                                    <tr>
+                                                        <td>Klebsiella pneumoniae</td>
+                                                        <td>0.7455</td>
+                                                    </tr>   
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- lung -->
+                <br>
+                <div class="row">
+                    <div class="tabs-framed">
+                        <ul class="tabs clearfix">
+                            <li class="active"><a href="#Phylum_lung" data-toggle="tab">Phylum</a></li>
+                            <li class=""><a href="#Genus_lung" data-toggle="tab">Genus</a></li>
+                            <li class=""><a href="#Species_lung" data-toggle="tab">Species</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <!-- Tab 1 -->
+                            <div class="tab-pane fade active in" id="Phylum_lung">
+                                <div class="tab-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <br><br><br><br>
+                                            <div id="Phylum_lung_pie">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phylum</th>
+                                                        <th>Relative abundance(%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Firmicutes</td>
+                                                        <td>92.5185</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Unclassified</td>
+                                                        <td>5.0874</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Proteobacteria</td>
+                                                        <td>1.0917</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Tenericutes</td>
+                                                        <td>0.7414</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacteroidetes</td>
+                                                        <td>0.2451</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Actinobacteria</td>
+                                                        <td>0.1823</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Cyanobacteria</td>
+                                                        <td>0.1201</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Euryarchaeota</td>
+                                                        <td>0.0103</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fusobacteria</td>
+                                                        <td>0.0022</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chlamydiae</td>
+                                                        <td>0.0004</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Spirochaetes</td>
+                                                        <td>0.0003</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Verrucomicrobia</td>
+                                                        <td>0.0001</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Gemmatimonadetes</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Deinococcus-Thermus</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Candidatus_Saccharibacteria</td>
+                                                        <td>0.0000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab 2 -->
+                            <div class="tab-pane fade" id="Genus_lung">
+                                <div class="tab-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <br><br><br><br>
+                                            <div id="Genus_lung_pie">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phylum</th>
+                                                        <th>Relative abundance(%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Staphylococcus</td>
+                                                        <td>75.8607</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacillus</td>
+                                                        <td>14.5496</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Unclassified</td>
+                                                        <td>5.4258</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Streptococcus</td>
+                                                        <td>0.9159</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mycoplasma</td>
+                                                        <td>0.7408</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mastadenovirus</td>
+                                                        <td>0.5650</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Haemophilus</td>
+                                                        <td>0.2816</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Pseudomonas</td>
+                                                        <td>0.2682</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Enterobacter</td>
+                                                        <td>0.1519</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacteroides</td>
+                                                        <td>0.1289</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Microcystis</td>
+                                                        <td>0.1123</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Gemella</td>
+                                                        <td>0.0999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Prevotella</td>
+                                                        <td>0.0914</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Escherichia</td>
+                                                        <td>0.0647</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Faecalibacterium</td>
+                                                        <td>0.0613</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tab 3 -->
+                            <div class="tab-pane fade" id="Species_lung">
+                                <div class="tab-body">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <br><br><br><br>
+                                            <div id="Species_lung_pie">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Phylum</th>
+                                                        <th>Relative abundance(%)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Staphylococcus aureus</td>
+                                                        <td>51.5443</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Staphylococcus epidermidis</td>
+                                                        <td>20.0261</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacillus cereus</td>
+                                                        <td>9.9344</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Unclassified</td>
+                                                        <td>9.6185</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacillus anthracis</td>
+                                                        <td>1.7322</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacillus wiedmannii</td>
+                                                        <td>1.1291</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Staphylococcus hominis</td>
+                                                        <td>0.7597</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mycoplasma pneumoniae</td>
+                                                        <td>0.7314</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Human mastadenovirus B</td>
+                                                        <td>0.5399</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Staphylococcus schweitzeri</td>
+                                                        <td>0.3953</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bacillus thuringiensis</td>
+                                                        <td>0.3327</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Staphylococcus caprae</td>
+                                                        <td>0.2892</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Haemophilus influenzae</td>
+                                                        <td>0.2455</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Streptococcus agalactiae</td>
+                                                        <td>0.2181</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Streptococcus pneumoniae</td>
+                                                        <td>0.2148</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS -->
+    <section class="slice bg-white">
+        <div class="wp-section">
+            <div class="container">
+                <div class="section-title-wr">
+                    <h3 class="section-title left"><span>Membership</span></h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="client">
+                            <a href="#">
+                                <img src="/static/respiratory_microbial_gene_catalogue/images/membership/wehealth.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="client">
+                            <a href="#">
+                                <img src="/static/respiratory_microbial_gene_catalogue/images/membership/children_hos_sz.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                     <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="client">
+                            <a href="#">
+                                <img src="/static/respiratory_microbial_gene_catalogue/images/membership/cma.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                     <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="client">
+                            <a href="#">
+                                <img src="/static/respiratory_microbial_gene_catalogue/images/membership/children_hos_bj_1.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                     <div class="col-md-2 col-sm-4 col-xs-6">
+                        <div class="client">
+                            <a href="#">
+                                <img src="/static/respiratory_microbial_gene_catalogue/images/membership/cityu.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+
+            
+            <hr>
+            
+            <div class="row">
+                <div class="col-lg-9 copyright">
+                    2017 © Delta Team. All rights reserved.
+                    <a href="#">Terms and conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Essentials -->
+<script src="/static/respiratory_microbial_gene_catalogue/js/modernizr.custom.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.easing.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.metadata.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.hoverup.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.hoverdir.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.stellar.js"></script>
+
+<!-- Boomerang mobile nav - Optional  -->
+<script src="/static/respiratory_microbial_gene_catalogue/assets/responsive-mobile-nav/js/jquery.dlmenu.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/responsive-mobile-nav/js/jquery.dlmenu.autofill.js"></script>
+
+<!-- Forms -->
+<script src="/static/respiratory_microbial_gene_catalogue/assets/ui-kit/js/jquery.powerful-placeholder.min.js"></script> 
+<script src="/static/respiratory_microbial_gene_catalogue/assets/ui-kit/js/cusel.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/js/jquery.form.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/js/jquery.validate.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/js/jquery.maskedinput.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/js/jquery.modal.js"></script>
+
+<!-- Assets -->
+<script src="/static/respiratory_microbial_gene_catalogue/assets/hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/page-scroller/jquery.ui.totop.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/mixitup/jquery.mixitup.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/mixitup/jquery.mixitup.init.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/waypoints/waypoints.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/milestone-counter/jquery.countTo.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/easy-pie-chart/js/jquery.easypiechart.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/social-buttons/js/rrssb.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/nouislider/js/jquery.nouislider.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/owl-carousel/owl.carousel.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/bootstrap/js/tooltip.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/bootstrap/js/popover.js"></script>
+
+<!-- Sripts for individual pages, depending on what plug-ins are used -->
+<script src="/static/respiratory_microbial_gene_catalogue/assets/layerslider/js/greensock.js" type="text/javascript"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+<!-- Initializing the slider -->
+<script>
+    jQuery("#layerslider").layerSlider({
+        pauseOnHover: true,
+        autoPlayVideos: false,
+        skinsPath: 'assets/layerslider/skins/',
+        responsive: false,
+        responsiveUnder: 1280,
+        layersContainer: 1280,
+        skin: 'borderlessdark3d',
+        hoverPrevNext: true,
+    });
+</script>
+
+<!-- Boomerang App JS -->
+<script src="/static/respiratory_microbial_gene_catalogue/js/wp.app.js"></script>
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Temp You can remove this once you started to work on your project -->
+<!-- <script src="/static/respiratory_microbial_gene_catalogue/js/jquery.cookie.js"></script> -->
+<!-- <script src="/static/respiratory_microbial_gene_catalogue/js/wp.switcher.js"></script> -->
+<!-- <script type="text/javascript" src="/static/respiratory_microbial_gene_catalogue/js/wp.ga.js"></script> -->
+<script src="/static/respiratory_microbial_gene_catalogue/js/highcharts.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/exporting.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/pie-chart.js"></script>
+<!-- overwrite css -->
+<style>
+.client {
+    border: unset;
+}
+.client img {
+    filter: unset;
+}
+</style>
+
+</body>
+</html> 
