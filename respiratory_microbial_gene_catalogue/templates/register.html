@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Boomerang 2 - MultiPurpose Template</title>
+
+    <!-- Essential styles -->
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/font-awesome/css/font-awesome.min.css" type="text/css"> 
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/fancybox/jquery.fancybox.css?v=2.1.5" media="screen"> 
+     
+    <!-- Boomerang styles -->
+        <link id="wpStylesheet" type="text/css" href="/static/respiratory_microbial_gene_catalogue/css/global-style.css" rel="stylesheet" media="screen">
+        
+
+    <!-- Favicon -->
+    <link href="/static/respiratory_microbial_gene_catalogue/images/favicon.png" rel="icon" type="image/png">
+
+    <!-- Assets -->
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/css/sky-forms.css">    
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" href="assets/sky-forms/css/sky-forms-ie8.css">
+    <![endif]-->
+
+    <!-- Required JS -->
+    <script src="/static/respiratory_microbial_gene_catalogue/js/jquery.js"></script>
+    <script src="/static/respiratory_microbial_gene_catalogue/js/jquery-ui.min.js"></script>
+
+    <!-- Page scripts -->
+    
+</head>
+<body class="body-wrap body-boxed body-bg-3">
+<!-- MODALS -->
+
+<!-- MOBILE MENU - Option 2 -->
+<section id="navMobile" class="aside-menu left">
+    <form class="form-horizontal form-search">
+        <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+                <button id="btnHideMobileNav" class="btn btn-close" type="button" title="Hide sidebar"><i class="fa fa-times"></i></button>
+            </span>
+        </div>
+    </form>
+    <div id="dl-menu" class="dl-menuwrapper">
+        <ul class="dl-menu"></ul>
+    </div>
+</section> 
+
+<!-- SLIDEBAR -->
+<section id="asideMenu" class="aside-menu right">
+    <form class="form-horizontal form-search">
+        <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search..." />
+            <span class="input-group-btn">
+                <button id="btnHideAsideMenu" class="btn btn-close" type="button" title="Hide sidebar"><i class="fa fa-times"></i></button>
+            </span>
+        </div>
+    </form>
+    
+    <h5 class="side-section-title">Optional sidebar menu</h5>
+    <div class="nav">
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About us</a>
+            </li>
+            <li>
+                <a href="#">Blog</a>
+            </li>
+            <li>
+                <a href="#">Work</a>
+            </li>
+            <li>
+                <a href="#">Online shop</a>
+            </li>
+        </ul>
+    </div>
+    
+    <h5 class="side-section-title">Social media</h5>
+    <div class="social-media">
+        <a href="#"><i class="fa fa-facebook facebook"></i></a>
+        <a href="#"><i class="fa fa-google-plus google"></i></a>
+        <a href="#"><i class="fa fa-twitter twitter"></i></a>
+    </div>
+    
+    <h5 class="side-section-title">Contact information</h5>
+    <div class="contact-info">
+        <h5>Address</h5>
+        <p>5th Avenue, New York - United States</p>
+        
+        <h5>Email</h5>
+        <p>hello@webpixels.ro</p>
+        
+        <h5>Phone</h5>
+        <p>+10 724 1234 567</p>
+    </div>
+</section>
+            <!-- HEADER -->
+        <div id="divHeaderWrapper">
+            <header class="header-standard-2">     
+    <!-- MAIN NAV -->
+    <div class="navbar navbar-wp navbar-arrow mega-nav" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle navbar-toggle-aside-menu">
+                    <i class="fa fa-outdent icon-custom"></i>
+                </button>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars icon-custom"></i>
+                </button>
+
+                <a class="navbar-brand" href="/" title="Boomerang | One template. Infinite solutions">
+                    <img src="/static/respiratory_microbial_gene_catalogue/images/meta.png" alt="Boomerang | One template. Infinite solutions">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a href="/">Home</a>
+                    </li>
+                    <li >
+                        <a href="/data-tools">Pages</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personal</a>
+                        <ul class="dropdown-menu">
+                            {% if request.user.is_authenticated %}
+                            <li><a tabindex="-1" href="/project_list/">projects</a></li>
+                            <li><a tabindex="-1" href="/accounts/logout/">log out</a></li>
+                            {% else %}
+                            <li><a href="/accounts/login/">Login</a></li>
+                            <li><a href="/accounts/register/">Register</a></li>
+                            {% endif %}
+                        </ul>
+                    </li>
+
+
+                </ul>
+               
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+</header>        </div>
+
+        <!-- Optional header components (ex: slider) -->
+            
+    <!-- MAIN CONTENT -->
+        <div class="pg-opt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Sign up</h2>
+                </div>
+                <div class="col-md-6">
+                    <ol class="breadcrumb">
+                        <li><a href="/">Home</a></li>
+                        <li class="active">Sign up</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="slice slice-lg bg-image" style="background-image:url(/static/respiratory_microbial_gene_catalogue/images/backgrounds/full-bg-1.jpg)">
+        <div class="wp-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3">                   
+                        <div class="wp-block default user-form user-form-alpha no-margin">
+                            <div class="form-header">
+                                <h2>Create your own account</h2>
+                            </div>
+                            <div class="form-body">
+                                <form action="/accounts/register/" id="frmRegister" class="sky-form" method='POST'>               
+                                {% csrf_token %}                      
+                                    <fieldset class="no-padding">           
+                                        <section class="">
+                                            <div class="row">
+                                                <div class="col-xs-6">
+                                                    <div class="form-group">
+                                                        <label class="input">
+                                                            <i class="icon-append fa fa-user"></i>
+                                                            {% if msg %}
+                                                            <input type="text" name="username" placeholder="Username" value={{ username }}>
+                                                            {% else %}
+                                                            <input type="text" name="username" placeholder="Username">
+                                                            {% endif %}
+                                                            <b class="tooltip tooltip-bottom-right">Needed to enter the website</b>
+                                                        </label>
+                                                    </div>               
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <div class="form-group">
+                                                        <div class="form-group">
+                                                            <label class="input">
+                                                                <i class="icon-append fa fa-envelope-o"></i>
+                                                                {% if msg %}
+                                                                <input type="email" name="email" placeholder="E-mail" value={{ email }}>
+                                                                {% else %}
+                                                                <input type="email" name="email" placeholder="E-mail">
+                                                                {% endif %}
+                                                                <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+                                                            </label>
+                                                        </div>  
+                                                    </div>               
+                                                </div>
+                                            </div>   
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="input">
+                                                            <i class="icon-append fa fa-lock"></i>
+                                                            <input type="password" name="password" placeholder="Password">
+                                                            <b class="tooltip tooltip-bottom-right">Needed to enter the website</b>
+                                                        </label>
+                                                    </div>               
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="input">
+                                                            <i class="icon-append fa fa-lock"></i>
+                                                            <input type="password" name="confirmpassword" placeholder="Confirm Password">
+                                                            <b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+                                                        </label>
+                                                    </div>               
+                                                </div>
+                                            </div>   
+                                        </section>
+                                        
+                                        <section class="no-margin">
+                                            <div class="row">
+                                                <section class="col-xs-6">
+                                                    <label class="input">
+                                                        <i class="icon-append fa fa-user"></i>
+                                                        {% if msg %}
+                                                        <input type="text" name="fname" placeholder="First name" value={{ fname }}>
+                                                        {% else %}
+                                                        <input type="text" name="fname" placeholder="First name">
+                                                        {% endif %}
+                                                    </label>
+                                                </section>
+                                                <section class="col-xs-6">
+                                                    <label class="input">
+                                                        <i class="icon-append fa fa-user"></i>
+                                                        {% if msg %}
+                                                        <input type="text" name="lname" placeholder="Last name" value={{ lname }}>
+                                                        {% else %}
+                                                        <input type="text" name="lname" placeholder="Last name">
+                                                        {% endif %}
+                                                    </label>
+                                                </section>
+                                            </div> 
+                                        </section>
+                                        <section>
+                                            <div class="row">
+                                                <div class="col-md-4 col-md-offset-8">
+                                                    <button class="btn btn-alt btn-icon btn-icon-right btn-icon-go pull-right" type="submit">
+                                                        <span>Register now</span>
+                                                    </button>
+                                                </div>
+                                        </section>
+                                    </fieldset>  
+
+
+
+                                </form>  
+                            </div>
+                            <div class="form-footer">
+                                {% if msg %}
+                                <div class="alert alert-danger fade in">
+                                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                                    <strong>Registration Failed!</strong> {{ msg }}.
+                                </div>
+                                {% endif %}
+                                <p>Already have an account? <a href="/accounts/signin/">Click here to sign in.</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">          
+            <div class="row">
+                <div class="col-lg-9 copyright">
+                    2014 © Web Pixels. All rights reserved.
+                    <a href="#">Terms and conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!-- Essentials -->
+<script src="/static/respiratory_microbial_gene_catalogue/js/modernizr.custom.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.easing.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.metadata.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.hoverup.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.hoverdir.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/js/jquery.stellar.js"></script>
+
+<!-- Boomerang mobile nav - Optional  -->
+<script src="/static/respiratory_microbial_gene_catalogue/assets/responsive-mobile-nav/js/jquery.dlmenu.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/responsive-mobile-nav/js/jquery.dlmenu.autofill.js"></script>
+
+<!-- Forms -->
+<script src="/static/respiratory_microbial_gene_catalogue/assets/ui-kit/js/jquery.powerful-placeholder.min.js"></script> 
+<script src="/static/respiratory_microbial_gene_catalogue/assets/ui-kit/js/cusel.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/js/jquery.form.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/js/jquery.validate.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/js/jquery.maskedinput.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/js/jquery.modal.js"></script>
+
+<!-- Assets -->
+<script src="/static/respiratory_microbial_gene_catalogue/assets/hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/page-scroller/jquery.ui.totop.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/mixitup/jquery.mixitup.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/mixitup/jquery.mixitup.init.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/waypoints/waypoints.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/milestone-counter/jquery.countTo.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/easy-pie-chart/js/jquery.easypiechart.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/social-buttons/js/rrssb.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/nouislider/js/jquery.nouislider.min.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/owl-carousel/owl.carousel.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/bootstrap/js/tooltip.js"></script>
+<script src="/static/respiratory_microbial_gene_catalogue/assets/bootstrap/js/popover.js"></script>
+
+<!-- Sripts for individual pages, depending on what plug-ins are used -->
+
+<!-- Boomerang App JS -->
+<script src="/static/respiratory_microbial_gene_catalogue/js/wp.app.js"></script>
+<!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Temp You can remove this once you started to work on your project -->
+<!-- <script src="js/jquery.cookie.js"></script> -->
+<!-- <script src="js/wp.switcher.js"></script> -->
+<!-- <script type="text/javascript" src="js/wp.ga.js"></script> -->
+<script src="/static/respiratory_microbial_gene_catalogue/js/register.js"></script>
+
+</body>
+</html>

@@ -297,43 +297,18 @@
                         <a href="/">Home</a>
                     </li>
                     <li >
-                        <a href="/data-tools">Pages</a>
+                        <a href="/data-tools">Data &amp; tools</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personal</a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Real Estate</a>
-                                <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="homepage-estate-1.html">Homepage</a></li>
-                                    <li><a tabindex="-1" href="estate-listing-1.html">Listing: List </a></li>
-                                    <li><a tabindex="-1" href="estate-listing-2.html">Listing: Grid</a></li>
-                                    <li><a tabindex="-1" href="estate-property.html">Property</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Jobs</a>
-                                <ul class="dropdown-menu">
-                                    <li><a tabindex="-1" href="homepage-jobs-1.html">Homepage</a></li>
-                                    <li><a tabindex="-1" href="jobs-listing-1.html">Jobs listing</a></li>
-                                    <li><a tabindex="-1" href="job-description-1.html">Job description</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown-submenu">
-                                <a tabindex="-1" href="#">Magazine &amp; Newspaper</a>
-                                <ul class="dropdown-menu">
-                                    <li class="divider">Magazine</li>
-                                    <li><a tabindex="-1" href="homepage-magazine-1.html">Homepage</a></li>
-                                    <li><a tabindex="-1" href="magazine-listing-1.html">Category listing: List</a></li>
-                                    <li><a tabindex="-1" href="magazine-listing-2.html">Category listing: Grid</a></li>
-                                    <li><a tabindex="-1" href="magazine-article-1.html">Magazine article</a></li>
-                                    <li class="divider">Newspaper</li>
-                                    <li><a tabindex="-1" href="homepage-newspaper-1.html">Newspaper homepage</a></li>
-                                    <li><a tabindex="-1" href="newspaper-listing-1.html">Newspaper listing: List</a></li>
-                                    <li><a tabindex="-1" href="newspaper-listing-2.html">Newspaper listing: Grid</a></li>
-                                    <li><a tabindex="-1" href="magazine-article-1.html">Newspaper article</a></li>
-                                </ul>
-                            </li>
+                            {% if request.user.is_authenticated %}
+                            <li><a tabindex="-1" href="/mission-list/">projects</a></li>
+                            <li><a tabindex="-1" href="/accounts/logout/">log out</a></li>
+                            {% else %}
+                            <li><a href="/accounts/login/">Login</a></li>
+                            <li><a href="/accounts/register/">Register</a></li>
+                            {% endif %}
                         </ul>
                     </li>
 
