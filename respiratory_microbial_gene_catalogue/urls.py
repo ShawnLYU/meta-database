@@ -11,18 +11,17 @@ urlpatterns = [
     # url(r'^blog/', include('blog.urls')),
 
     # ------------------------User authentication---------------------------------#
-    url(r'^$', home, name='home'),
-    url(r'^data-tools/', data_tools, name='data-tools'),
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
-    url(r'^accounts/login/', login, name='login'),
-    url(r'^accounts/logout/', logout, name='logout'),
-    url(r'^accounts/register/$', register, name='register'),
-    url(r'^mission-list/$', mission_list, name='mission_list'),
-    url(r'^mission/$', mission, name='mission'),
-    url(r'^acquire_missions/$', acquire_missions, name='acquire_missions'),
-    url(r'^demo-mission/$', demo_mission, name='demo_mission'),
-    url(r'^create-mission/$', create_mission, name='create_mission')
-    
+    url(r'^respiratory_microbial_gene_catalogue/$', home, name='home'),
+    url(r'^respiratory_microbial_gene_catalogue/data-tools/', data_tools, name='data-tools'),
+    url(r'^respiratory_microbial_gene_catalogue/media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
+    url(r'^respiratory_microbial_gene_catalogue/accounts/login/', login, name='login'),
+    url(r'^respiratory_microbial_gene_catalogue/accounts/logout/', logout, name='logout'),
+    url(r'^respiratory_microbial_gene_catalogue/accounts/register/$', register, name='register'),
+    url(r'^respiratory_microbial_gene_catalogue/mission-list/$', mission_list, name='mission_list'),
+    url(r'^respiratory_microbial_gene_catalogue/acquire_missions/$', acquire_missions, name='acquire_missions'),
+    url(r'^respiratory_microbial_gene_catalogue/demo-mission/$', demo_mission, name='demo_mission'),
+    url(r'^respiratory_microbial_gene_catalogue/create-mission/$', create_mission, name='create_mission'),
+    url(r'^respiratory_microbial_gene_catalogue/activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$', activate, name='activate'),
     # url('^register/', system_register, name='register'),
     # url('^logout/', system_logout, name='logout'),
 

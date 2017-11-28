@@ -35,15 +35,7 @@ Highcharts.chart('Phylum_op_pie', {
             {name: "Proteobacteria", y:12.5073 },
             {name: "Actinobacteria", y:9.4388 },
             {name: "Fusobacteria", y:3.0082 },
-            {name: "Tenericutes", y:0.0686 },
-            {name: "Spirochaetes", y:0.0398 },
-            {name: "Candidatus Saccharibacteria", y:0.0094 },
-            {name: "Cyanobacteria", y:0.0004 },
-            {name: "Nitrospirae", y:0.0002 },
-            {name: "Deinococcus-Thermus", y:0.0001 },
-            {name: "Chlorobi", y:0.0001 },
-            {name: "Synergistetes", y:0.0001 },
-            {name: "Chlamydiae", y:0.0001 }
+            {name: "Others", y:0.1194 }
         ]
     }]
 });
@@ -180,13 +172,7 @@ Highcharts.chart('Phylum_np_pie', {
             {name: "Actinobacteria",y:5.5105},
             {name: "Bacteroidetes",y:5.4922},
             {name: "Tenericutes",y:0.3619},
-            {name: "Fusobacteria",y:0.0637},
-            {name: "Spirochaetes",y:0.0024},
-            {name: "Deinococcus-Thermus",y:0.0017},
-            {name: "Cyanobacteria",y:0.0004},
-            {name: "Candidatus_Saccharibacteria",y:0.0003},
-            {name: "Synergistetes",y:0.0002},
-            {name: "Verrucomicrobia",y:0.0001},
+            {name: "Others",y:0.0689}
         ]
     }]
 });
@@ -330,15 +316,7 @@ Highcharts.chart('Phylum_lung_pie', {
         { name : "Tenericutes", y:  0.7414 },
         { name : "Bacteroidetes", y:    0.2451 },
         { name : "Actinobacteria", y:   0.1823 },
-        { name : "Cyanobacteria", y:    0.1201 },
-        { name : "Euryarchaeota", y:    0.0103 },
-        { name : "Fusobacteria", y: 0.0022 },
-        { name : "Chlamydiae", y:   0.0004 },
-        { name : "Spirochaetes", y: 0.0003 },
-        { name : "Verrucomicrobia", y:  0.0001 },
-        { name : "Gemmatimonadetes", y: 0.0000 },
-        { name : "Deinococcus-Thermus", y:  0.0000 },
-        { name : "Candidatus_Saccharibacteria", y:  0.0000 }
+        { name : "Others", y:    0.1336 }
         ]
     }]
 });

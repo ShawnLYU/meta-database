@@ -8,7 +8,7 @@ $(document).ready(function(){
  //    });
     
     $('#mission_list').DataTable( {
-        "ajax": "/acquire_missions/",
+        "ajax": "/respiratory_microbial_gene_catalogue/acquire_missions/",
         "columns": [
             { 'data': 'title' },
             { 'data': 'status' },

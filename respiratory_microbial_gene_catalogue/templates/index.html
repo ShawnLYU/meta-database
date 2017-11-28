@@ -1,324 +1,4 @@
-
-<!DOCTYPE html>
-<html>  
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
-    <title>Respiratory Microbial Gene Catalogue</title>
-
-    <!-- Essential styles -->
-    <!-- <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/bootstrap/css/bootstrap.min.css" type="text/css"> -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/font-awesome/css/font-awesome.min.css" type="text/css"> 
-    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/fancybox/jquery.fancybox.css?v=2.1.5" media="screen"> 
-     
-    <!-- Boomerang styles -->
-        <link id="wpStylesheet" type="text/css" href="/static/respiratory_microbial_gene_catalogue/css/global-style.css" rel="stylesheet" media="screen">
-        
-
-    <!-- Favicon -->
-    <link href="/static/respiratory_microbial_gene_catalogue/images/favicon.png" rel="icon" type="image/png">
-
-    <!-- Assets -->
-    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/owl-carousel/owl.theme.css">
-    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/sky-forms/css/sky-forms.css">    
-    <!--[if lt IE 9]>
-        <link rel="stylesheet" href="assets/sky-forms/css/sky-forms-ie8.css">
-    <![endif]-->
-
-    <!-- Required JS -->
-    <script src="/static/respiratory_microbial_gene_catalogue/js/jquery.js"></script>
-    <script src="/static/respiratory_microbial_gene_catalogue/js/jquery-ui.min.js"></script>
-
-    <!-- Page scripts -->
-    <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/assets/layerslider/css/layerslider.css" type="text/css">
-
-</head>
-<body class="body-wrap body-boxed body-bg-3">
-<!-- MODALS -->
-
-<!-- MOBILE MENU - Option 2 -->
-<section id="navMobile" class="aside-menu left">
-    <form class="form-horizontal form-search">
-        <div class="input-group">
-            <input type="search" class="form-control" placeholder="Search...">
-            <span class="input-group-btn">
-                <button id="btnHideMobileNav" class="btn btn-close" type="button" title="Hide sidebar"><i class="fa fa-times"></i></button>
-            </span>
-        </div>
-    </form>
-    <div id="dl-menu" class="dl-menuwrapper">
-        <ul class="dl-menu"></ul>
-    </div>
-</section> 
-
-<!-- SLIDEBAR -->
-<section id="asideMenu" class="aside-menu right">
-    <form class="form-horizontal form-search">
-        <div class="input-group">
-            <input type="search" class="form-control" placeholder="Search..." />
-            <span class="input-group-btn">
-                <button id="btnHideAsideMenu" class="btn btn-close" type="button" title="Hide sidebar"><i class="fa fa-times"></i></button>
-            </span>
-        </div>
-    </form>
-    
-    <h5 class="side-section-title">Optional sidebar menu</h5>
-    <div class="nav">
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">About us</a>
-            </li>
-            <li>
-                <a href="#">Blog</a>
-            </li>
-            <li>
-                <a href="#">Work</a>
-            </li>
-            <li>
-                <a href="#">Online shop</a>
-            </li>
-        </ul>
-    </div>
-    
-    <h5 class="side-section-title">Social media</h5>
-    <div class="social-media">
-        <a href="#"><i class="fa fa-facebook facebook"></i></a>
-        <a href="#"><i class="fa fa-google-plus google"></i></a>
-        <a href="#"><i class="fa fa-twitter twitter"></i></a>
-    </div>
-    
-    <h5 class="side-section-title">Contact information</h5>
-    <div class="contact-info">
-        <h5>Address</h5>
-        <p>5th Avenue, New York - United States</p>
-        
-        <h5>Email</h5>
-        <p>hello@webpixels.ro</p>
-        
-        <h5>Phone</h5>
-        <p>+10 724 1234 567</p>
-    </div>
-</section>
-
-<!-- MAIN WRAPPER -->
-<div class="body-wrap">
-    <!-- This section is only for demonstration purpose only. Check out the docs for more informations" -->
-<!--     <div id="divStyleSwitcher" class="style-switcher-slidebar">
-    <a href="#" id="cmdShowStyleSwitcher" class="open-panel hidden-xs"><i class="fa fa-cog"></i></a>
-    <div class="switch-panel">
-        <h3>Boomerang - Style Builder</h3>
-        <div class="panel-section">
-            <h4 class="title text-uppercase font-normal">Layout options</h4>
-
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label>I prefer it:</label> 
-                        <select id="cmbLayoutStyle" class="form-control">
-                            <option value="1">Fluid</option>
-                            <option value="2">Boxed</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label></label>
-                        <select id="cmbLayoutColor" class="form-control">
-                            <option value="1">Light</option>
-                            <option value="2">Dark</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <label class="mt-10">Predefined body backgrounds</label>
-            <span class="clearfix"></span>
-            <span id="cmbBodyBg" class="color-switch">
-                <a href="#" id="cmdBodyBg1" class="body-bg-1 ttip" data-toggle="bottom" title="Solid color"></a>
-                <a href="#" id="cmdBodyBg2" class="body-bg-2 ttip" data-toggle="bottom" title="Black Lozenge"></a>
-                <a href="#" id="cmdBodyBg3" class="body-bg-3 ttip" data-toggle="bottom" title="Squairy Light"></a>
-                <a href="#" id="cmdBodyBg4" class="body-bg-4 ttip" data-toggle="bottom" title="Dark Dotted"></a>
-                <a href="#" id="cmdBodyBg5" class="body-bg-5 ttip" data-toggle="bottom" title="Skulls"></a>
-                <a href="#" id="cmdBodyBg6" class="body-bg-6 ttip" data-toggle="bottom" title="Image Background - 1"></a>
-                <a href="#" id="cmdBodyBg7" class="body-bg-7 ttip" data-toggle="bottom" title="Image Background - 2"></a>
-                <span class="clearfix"></span>
-            </span>
-
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label>Section title:</label>
-                        <select id="cmbSectionTitleStyle" class="form-control">
-                            <option value="1">Style 1</option>
-                            <option value="2">Style 2</option>
-                            <option value="3">Style 3</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label>Color:</label>
-                        <select id="cmbSectionTitleColor" class="form-control" disabled="disabled">
-                            <option value="1">Base</option>
-                            <option value="2">Alt Base</option>
-                            <option value="3">Light</option>
-                            <option value="4">Dark</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>   
-
-        <hr> 
-
-        <div class="panel-section">
-            <h4 class="title text-uppercase font-normal">Header options</h4> 
-
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label>Header:</label>
-                        <select id="cmbHeaderStyle" class="form-control">
-                            <option value="2">Header 1: Default navbar</option>
-                            <option value="3">Header 2: Default navbar + Top header</option>
-                            <option value="1">Header 3: Header + Navbar</option>
-                            <option value="4">Header 4: Cover</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label>Top header color:</label>
-                        <select id="cmbTopHeaderColor" class="form-control" disabled="disabled">
-                            <option value="1">Light</option>
-                            <option value="2">Dark</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>     
-
-        <div class="panel-section">
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label>Nav shadow</label>
-                        <select id="cmbNavShadow" class="form-control">
-                            <option value="1">No</option>
-                            <option value="2">Yes</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label>Dropdown arrow:</label>
-                        <select id="cmbNavDropdownArrow" class="form-control">
-                            <option value="2">Yes</option>
-                            <option value="1">No</option>
-                        </select>
-                    </div>
-                </div>          
-            </div>
-        </div>   
-
-        <hr>
-
-        <div class="panel-section">
-            <h4 class="title text-uppercase font-normal">Color options</h4>
-
-            <label>Predefined colors</label>
-            <span class="clearfix"></span>
-            <span class="color-switch">
-                <a href="#" id="cmdSchemeRed" class="color-red" title="Red">Red</a>
-                <a href="#" id="cmdSchemeViolet" class="color-violet" title="Violet">Violet</a>
-                <a href="#" id="cmdSchemeBlue" class="color-blue" title="Blue">Blue</a>
-                <a href="#" id="cmdSchemeGreen" class="color-green" title="Green">Green</a>
-                <a href="#" id="cmdSchemeYellow" class="color-yellow" title="Yellow">Yellow</a>
-                <a href="#" id="cmdSchemeOrange" class="color-orange" title="Orange">Orange</a>
-            </span>
-        </div>
-
-        <hr>
-
-        <div class="panel-section">
-            <h4 class="title">
-                <span class="text-uppercase font-normal">Special</span> 
-                <a href="#" class="pop" title="About customization" data-content="We created some examples that show you the multitude of options you have so you make this template as you wish. <br><br>Customization is very easy and it is made in only one file.">
-                    <i class="fa fa-question-circle"></i>
-                </a>
-                <label class="badge base pull-right">New</label>
-            </h4>
-
-            <label>Predefined schemes</label>
-            <span class="clearfix"></span>
-            <span class="color-switch">
-                <a href="#" id="cmdSchemeBW" class="color-bw ttip" data-toggle="top" title="Black & White">Black and white</a>
-                <a href="#" id="cmdSchemeDark" class="color-dark ttip" data-toggle="top" title="Dark">Dark</a>
-                <a href="#" id="cmdSchemeFlat" class="color-flat ttip" data-toggle="top" title="Flat">Flat</a>
-            </span>
-
-        </div>
-
-        <div class="panel-section mt-15 hide">
-            <a href="#"><span>Reset all applied styles</span></a>
-            <br><br>
-        </div>
-
-    </div>
-</div> -->
-            <!-- HEADER -->
-        <div id="divHeaderWrapper">
-            <header class="header-standard-2">     
-    <!-- MAIN NAV -->
-    <div class="navbar navbar-wp navbar-arrow mega-nav" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle navbar-toggle-aside-menu">
-                    <i class="fa fa-outdent icon-custom"></i>
-                </button>
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <i class="fa fa-bars icon-custom"></i>
-                </button>
-
-                <a class="navbar-brand" href="/" title="Boomerang | One template. Infinite solutions">
-                    <img src="/static/respiratory_microbial_gene_catalogue/images/meta.png" alt="Boomerang | One template. Infinite solutions">
-                </a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li >
-                        <a href="/">Home</a>
-                    </li>
-                    <li >
-                        <a href="/data-tools">Data &amp; tools</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Personal</a>
-                        <ul class="dropdown-menu">
-                            {% if request.user.is_authenticated %}
-                            <li><a tabindex="-1" href="/mission-list/">projects</a></li>
-                            <li><a tabindex="-1" href="/accounts/logout/">log out</a></li>
-                            {% else %}
-                            <li><a href="/accounts/login/">Login</a></li>
-                            <li><a href="/accounts/register/">Register</a></li>
-                            {% endif %}
-                        </ul>
-                    </li>
-
-
-                </ul>
-               
-            </div><!--/.nav-collapse -->
-        </div>
-    </div>
-</header>        </div>
+{% include 'header.html' %}
 
         <!-- Optional header components (ex: slider) -->
             <!-- Importing slider content -->
@@ -331,14 +11,14 @@
             
             <!-- Left Text -->
             <h3 class="ls-l title-lg c-white text-shadow text-uppercase text-center strong" style="width:100%; top:25%; left:50%;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
-                Welcome to Boomerang
+                 
             </h3>
 <!--            <h3 class="ls-l title c-white text-wrapped black text-uppercase text-center strong" style="top:50%; left:50%;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:1000;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
                 Vision.Believe.Success
             </h3> -->
  
-            <h3 class="ls-l title-xs c-white text-shadow text-uppercase text-center strong" style="width:100%; top:50%; left:50%;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:1000;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
-                Start the tour
+            <h3 class="ls-l title c-white text-shadow text-uppercase text-center strong" style="width:100%; top:50%; left:50%;" data-ls="offsetxin:0;offsetyin:250;durationin:1000;delayin:500;offsetxout:0;offsetyout:-8;easingout:easeInOutQuart;scalexout:1.2;scaleyout:1.2;">
+                Respiratory Microbial Gene Catalogue
             </h3>
         </div>
     </div>
@@ -354,7 +34,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <p>
+                        <p style="font-size: large;">
                             Imbalanced respiratory microbiota have been demonstrated in pediatric pneumonia(PP), representing the most important causes of morbidity and mortality in Chinese children. 
                             <br><br>
                             Here, we construct an integrated respiratory microbial gene catalogue(RMGC) based on metagenomic sequencing data of 334 respiratory samples in 171 healthy and 76 pneumonia children, as well as published respiratory bacterial genomes and small-sized RMGC in Human Microbiome Project(HMP). We also provide an easily accessible database to facilitate the utilization of the catalogue, including free download of the gene sets and online analysis pipeline. 
@@ -373,7 +53,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-6 col-md-offset-3">
-                        <table class="table table-striped">
+                        <table class="table table-striped" style="font-size: medium;">
                             <thead>
                                 <tr>
                                     <th>#ORFs</th>
@@ -464,8 +144,14 @@
                         </h1>
                     </div>
                     <div class="col-md-4">
-                        <a href="#" class="btn btn-lg btn-b-white btn-icon btn-icon-right btn-check pull-right">
+                        {% if request.user.is_authenticated %}
+                        <a href="/respiratory_microbial_gene_catalogue/mission-list/" class="btn btn-lg btn-b-white btn-icon btn-icon-right btn-check pull-right">
                             <span>Try me now</span>
+                        {% else %}
+                        <a href="/respiratory_microbial_gene_catalogue/accounts/login/" class="btn btn-lg btn-b-white btn-icon btn-icon-right btn-check pull-right">
+                            <span>Try me now</span>
+                        {% endif %}
+                        
                         </a>
                     </div>
                 </div>
@@ -493,7 +179,7 @@
                                 <div class="tab-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <br><br><br><br>
+                                            
                                             <div id="Phylum_op_pie">
                                             </div>
                                         </div>
@@ -529,43 +215,11 @@
                                                     <tr>
                                                         <td>Fusobacteria</td>
                                                         <td>3.0082</td>
-                                                    </tr>   
+                                                    </tr>  
                                                     <tr>
-                                                        <td>Tenericutes</td>
-                                                        <td>0.0686</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Spirochaetes</td>
-                                                        <td>0.0398</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Candidatus Saccharibacteria</td>
-                                                        <td>0.0094</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Cyanobacteria</td>
-                                                        <td>0.0004</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Nitrospirae</td>
-                                                        <td>0.0002</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Deinococcus-Thermus</td>
-                                                        <td>0.0001</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Chlorobi</td>
-                                                        <td>0.0001</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Synergistetes</td>
-                                                        <td>0.0001</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Chlamydiae</td>
-                                                        <td>0.0001</td>
-                                                    </tr>   
+                                                        <td>Others</td>
+                                                        <td>0.1194</td>
+                                                    </tr>    
                                                 </tbody>
                                             </table>
                                         </div>
@@ -585,7 +239,7 @@
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Phylum</th>
+                                                        <th>Genus</th>
                                                         <th>Relative abundance(%)</th>
                                                     </tr>
                                                 </thead>
@@ -669,7 +323,7 @@
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Phylum</th>
+                                                        <th>Species</th>
                                                         <th>Relative abundance(%)</th>
                                                     </tr>
                                                 </thead>
@@ -758,7 +412,6 @@
                                 <div class="tab-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <br><br>
                                             <div id="Phylum_np_pie">
                                             </div>
                                         </div>
@@ -794,35 +447,11 @@
                                                     <tr>
                                                         <td>Tenericutes</td>
                                                         <td>0.3619</td>
-                                                    </tr>   
+                                                    </tr> 
                                                     <tr>
-                                                        <td>Fusobacteria</td>
-                                                        <td>0.0637</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Spirochaetes</td>
-                                                        <td>0.0024</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Deinococcus-Thermus</td>
-                                                        <td>0.0017</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Cyanobacteria</td>
-                                                        <td>0.0004</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Candidatus_Saccharibacteria</td>
-                                                        <td>0.0003</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Synergistetes</td>
-                                                        <td>0.0002</td>
-                                                    </tr>   
-                                                    <tr>
-                                                        <td>Verrucomicrobia</td>
-                                                        <td>0.0001</td>
-                                                    </tr>                                                       
+                                                        <td>Others</td>
+                                                        <td>0.0689</td>
+                                                    </tr>                                                     
                                                 </tbody>
                                             </table>
                                         </div>
@@ -842,7 +471,7 @@
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Phylum</th>
+                                                        <th>Genus</th>
                                                         <th>Relative abundance(%)</th>
                                                     </tr>
                                                 </thead>
@@ -926,7 +555,7 @@
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Phylum</th>
+                                                        <th>Species</th>
                                                         <th>Relative abundance(%)</th>
                                                     </tr>
                                                 </thead>
@@ -1016,7 +645,6 @@
                                 <div class="tab-body">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <br><br><br><br>
                                             <div id="Phylum_lung_pie">
                                             </div>
                                         </div>
@@ -1054,40 +682,8 @@
                                                         <td>0.1823</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Cyanobacteria</td>
-                                                        <td>0.1201</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Euryarchaeota</td>
-                                                        <td>0.0103</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Fusobacteria</td>
-                                                        <td>0.0022</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Chlamydiae</td>
-                                                        <td>0.0004</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Spirochaetes</td>
-                                                        <td>0.0003</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Verrucomicrobia</td>
-                                                        <td>0.0001</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Gemmatimonadetes</td>
-                                                        <td>0.0000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Deinococcus-Thermus</td>
-                                                        <td>0.0000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>Candidatus_Saccharibacteria</td>
-                                                        <td>0.0000</td>
+                                                        <td>Others</td>
+                                                        <td>0.1336</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -1108,7 +704,7 @@
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Phylum</th>
+                                                        <th>Genus</th>
                                                         <th>Relative abundance(%)</th>
                                                     </tr>
                                                 </thead>
@@ -1192,7 +788,7 @@
                                             <table class="table table-striped">
                                                 <thead>
                                                     <tr>
-                                                        <th>Phylum</th>
+                                                        <th>Species</th>
                                                         <th>Relative abundance(%)</th>
                                                     </tr>
                                                 </thead>
@@ -1280,31 +876,17 @@
                     <h3 class="section-title left"><span>Membership</span></h3>
                 </div>
                 <div class="row">
-                    <div class="col-md-2 col-sm-4 col-xs-6">
+                    <div class="col-md-3 col-sm-4 col-xs-6">
                         <div class="client">
                             <a href="#">
                                 <img src="/static/respiratory_microbial_gene_catalogue/images/membership/wehealth.png" alt="">
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-4 col-xs-6">
+                     <div class="col-md-4 col-sm-8 col-xs-6">
                         <div class="client">
                             <a href="#">
-                                <img src="/static/respiratory_microbial_gene_catalogue/images/membership/children_hos_sz.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                     <div class="col-md-2 col-sm-4 col-xs-6">
-                        <div class="client">
-                            <a href="#">
-                                <img src="/static/respiratory_microbial_gene_catalogue/images/membership/cma.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                     <div class="col-md-2 col-sm-4 col-xs-6">
-                        <div class="client">
-                            <a href="#">
-                                <img src="/static/respiratory_microbial_gene_catalogue/images/membership/children_hos_bj_1.png" alt="">
+                                <img src="/static/respiratory_microbial_gene_catalogue/images/membership/Picture1.png" alt="">
                             </a>
                         </div>
                     </div>
