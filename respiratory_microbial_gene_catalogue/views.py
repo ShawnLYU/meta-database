@@ -24,7 +24,23 @@ from django.template.loader import render_to_string
 from tokens import account_activation_token
 from django.core.mail import EmailMessage
 
+from django.core.mail import EmailMultiAlternatives
+from online_database.settings import EMAIL_HOST_USER
+from django.template import loader
 
+def send_registration(email, code):
+    # send registration email
+    email_template_name = 'email/register_email.html'
+    email_subject = 'Welcome to Deep Omics Analysis Platform'
+
+    context = {
+        'code': code
+    }
+    # body = loader.get_template(email_template_name).render(context)
+
+    msg = EmailMultiAlternatives(email_subject, 'body', EMAIL_HOST_USER, [email])
+    # msg.attach_alternative(body, "text/html")
+    msg.send()
 
 def home(request):
     return render(request, "index.html")
@@ -42,13 +58,13 @@ def login(request):
     if username=='' and password == '':
         return render(request,'login.html')
     user = auth.authenticate(username=username, password=password)
-    if user.is_active == False:
+    if user is None:
+        return render(request,'login.html', {'msg':'Login Failed'}) 
+    elif user.is_active == False:
         return render(request,'login.html', {'msg':'You need to first confirm your email address'}) 
-    elif user is not None and user.is_active:
+    else:
         auth.login(request, user)
         return redirect('/respiratory_microbial_gene_catalogue/mission-list')
-    else:
-        return render(request,'login.html', {'msg':'Login Failed'}) 
 
 def logout(request):
     auth.logout(request)
@@ -82,19 +98,20 @@ def register(request):
                 user = User.objects.create_user(username=username,password=password,email=email,first_name=fname, last_name=lname)
                 user = authenticate(username=username, password=password)
                 # auth.login(request, user)
-                user.is_active = False
+                user.is_active = True
                 user.save()
-                current_site = get_current_site(request)
-                message = render_to_string('acc_active_email.html', {
-                    'user':user, 
-                    'domain':current_site.domain,
-                    'uid': urlsafe_base64_encode(force_bytes(user.pk)),
-                    'token': account_activation_token.make_token(user),
-                })
-                mail_subject = 'Activate your blog account.'
-                to_email = email
-                email = EmailMessage(mail_subject, message, to=[to_email])
-                email.send()
+                # current_site = get_current_site(request)
+                # message = render_to_string('acc_active_email.html', {
+                #     'user':user, 
+                #     'domain':current_site.domain,
+                #     'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                #     'token': account_activation_token.make_token(user),
+                # })
+                # mail_subject = 'Activate your account.'
+                # to_email = email
+                # emailMessage = EmailMessage(mail_subject, message, to=[to_email])
+                # emailMessage.send()
+                #send_registration(to_email,'a')
                 # send_register_email(request, email, user_role.email_verification)
                 return render(request,'login.html', {'msg':'A confirm email has been sent to you.'}) 
             except IntegrityError:
@@ -165,7 +182,7 @@ def activate(request, uidb64, token):
     if user is not None and account_activation_token.check_token(user, token):
         user.is_active = True
         user.save()
-        login(request, user)
+        #login(request, user)
         # return redirect('home')
         return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
     else:

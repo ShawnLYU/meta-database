@@ -139,3 +139,7 @@ EMAIL_HOST_USER = 'platform.cityu@gmail.com'
 EMAIL_HOST_PASSWORD = 'fengxikang'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 SERVER_EMAIL = EMAIL_HOST_USER
+
+
+
+

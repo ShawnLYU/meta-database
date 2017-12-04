@@ -1,0 +1,9 @@
+table{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+}
+.client {
+    border: unset;
+}
+.client img {
+    filter: unset;
+}

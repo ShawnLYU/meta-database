@@ -547,7 +547,7 @@ $(document).ready(function() {
     	var headerHight = $("#divHeaderWrapper").height();
     	// var newSliderHeight = windowHeight - headerHight;
     	// customed
-    	var newSliderHeight = windowHeight * 0.4;
+    	var newSliderHeight = windowHeight * 0.6;
     	$("#layerslider").css({"height": newSliderHeight + "px"});
     }
     function layerSliderFullsize(){

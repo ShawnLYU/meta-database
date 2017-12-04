@@ -23,165 +23,89 @@
         <div class="wp-section work">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10">
-                        <div class="sort-list-btn hidden-xs">
-                            <button type="button" class="btn btn-base filter active" data-filter="all"><i class="fa fa-th-large"></i> Show all</button>
-                            <button type="button" class="btn btn-white filter" data-filter="assessment">Data assessment</button>
-                            <button type="button" class="btn btn-white filter" data-filter="taxonomic">Taxonomic component of each sample</button>
-                            <button type="button" class="btn btn-white filter" data-filter="comparison">Inter-group comparison</button>
+<div class="tabs-framed">
+    <ul class="tabs clearfix">
+        <li class="active"><a href="#assessment" data-toggle="tab">Data assessment</a></li>
+        <li class=""><a href="#component" data-toggle="tab">Taxonomic component of each sample</a></li>
+        <li id="realign" class=""><a href="#comparison" data-toggle="tab">Inter-group comparison</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <!-- Tab 1 -->
+        <div class="tab-pane fade active in" id="assessment">
+            <div class="tab-body">
+                <div class="mix col-lg-3 col-md-3 col-sm-6" data-cat="5">
+                    <div class="wp-block inverse">
+                        <div class="figure">
+                            <img alt="" src="/static/respiratory_microbial_gene_catalogue/images/file.png" class="img-responsive">
+                            <div class="figcaption bg-base"></div>
+                            <div class="figcaption-btn">
+                                <a href="/static/respiratory_microbial_gene_catalogue/images/file.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
+                                <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/DataStat.xlsx" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="btn-group pull-right hidden-md hidden-lg">
-                            <button type="button" class="btn btn-three">Filter projects</button>
-                            <button type="button" class="btn btn-three dropdown-toggle" data-toggle="dropdown">
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu pull-right" role="menu" id="ulFilterMenu">
-                                <li class="filter active" data-filter="all"><a>Show All</a></li>
-                                <li class="filter" data-filter="assessment"><a>Data assessment</a></li>
-                                <li class="filter" data-filter="taxonomic"><a>Taxonomic component of each sample</a></li>
-                                <li class="filter" data-filter="comparison"><a>Inter-group comparison</a></li>
-                            </ul>
+                        <div class="row">
+                            <div class="col-xs-9">
+                                
+                                <small>Data assessment</small>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">          
-                    <div id="ulSorList" class="grid" >
-                        <div class="grid-sizer"></div>
-                        <div class="mix assessment grid-item" data-cat="1">
-                            <div class="wp-block inverse">
-                                <div class="figure">
-                                    <img alt="" src="/static/respiratory_microbial_gene_catalogue/images/file.png" class="img-responsive">
-                                    <div class="figcaption bg-base"></div>
-                                    <div class="figcaption-btn">
-                                        <a href="/static/respiratory_microbial_gene_catalogue/images/file.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/DataStat.xlsx" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
-                                    </div>
+            </div>
+        </div>
+        <!-- Tab 2 -->
+        <div class="tab-pane fade" id="component">
+            <div class="tab-body">
+                <div class="mix col-lg-3 col-md-3 col-sm-6" data-cat="5">
+                    <div class="wp-block inverse">
+                        <div class="figure">
+                            <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy01.png" class="img-responsive">
+                            <div class="figcaption bg-base"></div>
+                            <div class="figcaption-btn">
+                                <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy01.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
+                                <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy01.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-9">
+                                
+                                <small>Taxonomic component of each sample</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tab 3 -->
+        <div class="tab-pane fade" id="comparison">
+            <div class="tab-body">
+                <div class="row">
+                    <h3 class="title">1.  Confounding factors</h3>
+                    <div class="mix col-lg-3 col-md-3 col-sm-6" data-cat="5">
+                        <div class="wp-block inverse">
+                            <div class="figure">
+                                <img alt="" src="/static/respiratory_microbial_gene_catalogue/images/file.png" class="img-responsive">
+                                <div class="figcaption bg-base"></div>
+                                <div class="figcaption-btn">
+                                    <a href="/static/respiratory_microbial_gene_catalogue/images/file.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
+                                    <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/PERMANOVA.xlsx" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
                                 </div>
-                                <div class="row">
-                                    <div class="col-xs-9">
-                                        <h2>DataStat.xlsx</h2>
-                                        <small>Data assessment</small>
-                                    </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    
+                                    <small>Inter-group comparison</small>
                                 </div>
                             </div>
                         </div>
-                        <div class="mix comparison grid-item" data-cat="1">
+                    </div>
+                </div>
+                <div class="row">
+                    <h3 class="title">2.  Group comparison analysis</h3>
+                    <div class="mix col-lg-3 col-md-3 col-sm-6" data-cat="5">
                             <div class="wp-block inverse">
-                                <div class="figure">
-                                    <img alt="" src="/static/respiratory_microbial_gene_catalogue/images/file.png" class="img-responsive">
-                                    <div class="figcaption bg-base"></div>
-                                    <div class="figcaption-btn">
-                                        <a href="/static/respiratory_microbial_gene_catalogue/images/file.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/PERMANOVA.xlsx" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-9">
-                                        <h2>PERMANOVA.xlsx</h2>
-                                        <small>Inter-group comparison</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mix taxonomic grid-item" data-cat="1">
-                            <div class="wp-block inverse">
-                                <div class="figure">
-                                    <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy01.png" class="img-responsive">
-                                    <div class="figcaption bg-base"></div>
-                                    <div class="figcaption-btn">
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy01.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy01.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-9">
-                                        <h2>Taxonomy01.png</h2>
-                                        <small>Taxonomic component of each sample</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mix comparison grid-item" data-cat="1">
-                            <div class="wp-block inverse">
-                                <div class="figure">
-                                    <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/eggNOG.barplot.png" class="img-responsive">
-                                    <div class="figcaption bg-base"></div>
-                                    <div class="figcaption-btn">
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/eggNOG.barplot.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/eggNOG.barplot.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-9">
-                                        <h2>eggNOG.barplot.png</h2>
-                                        <small>Differed functional categories</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mix comparison grid-item" data-cat="1">
-                            <div class="wp-block inverse">
-                                <div class="figure">
-                                    <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/KEGG.barplot.png" class="img-responsive">
-                                    <div class="figcaption bg-base"></div>
-                                    <div class="figcaption-btn">
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/KEGG.barplot.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/KEGG.barplot.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-9">
-                                        <h2>KEGG.barplot.png</h2>
-                                        <small>Differed functional categories</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <div class="mix comparison grid-item" data-cat="1">
-                            <div class="wp-block inverse">
-                                <div class="figure">
-                                    <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Diversity.png" class="img-responsive">
-                                    <div class="figcaption bg-base"></div>
-                                    <div class="figcaption-btn">
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Diversity.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Diversity.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-9">
-                                        <h2>Diversity.png</h2>
-                                        <small>Diversity</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mix comparison grid-item" data-cat="1">
-                            <div class="wp-block inverse">
-                                <div class="figure">
-                                    <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy02.png" class="img-responsive">
-                                    <div class="figcaption bg-base"></div>
-                                    <div class="figcaption-btn">
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy02.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
-                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy02.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-9">
-                                        <h2>Taxonomy02.png</h2>
-                                        <small>Differed taxonomic assignments</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mix comparison grid-item" data-cat="1">
-                            <div class="wp-block inverse">
-                                <div class="figure">
+                                <div class="figure" id='fig21'>
                                     <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/PCA.png" class="img-responsive">
                                     <div class="figcaption bg-base"></div>
                                     <div class="figcaption-btn">
@@ -191,16 +115,94 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-9">
-                                        <h2>PCA.png</h2>
+                                        
                                         <small>PCA</small>
                                     </div>
                                 </div>
+                            </div>                        
+                    </div>
+                    <div class="mix col-lg-3 col-md-3 col-sm-6" data-cat="5">
+                            <div class="wp-block inverse">
+                                <div class="figure" id="fig22">
+                                    <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Diversity.png" class="img-responsive">
+                                    <div class="figcaption bg-base"></div>
+                                    <div class="figcaption-btn">
+                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Diversity.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
+                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Diversity.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        
+                                        <small>Diversity</small>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="gap"></div>
-                    </div>                               
+                    </div>
                 </div>
+                <div class="row">
+                    <h3 class="title">3.  Differed taxonomic assignments and functional categories</h3>
+                    <div class="mix col-lg-3 col-md-3 col-sm-6" data-cat="5">
+                            <div class="wp-block inverse">
+                                <div class="figure" id="fig31">
+                                    <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy02.png" class="img-responsive">
+                                    <div class="figcaption bg-base"></div>
+                                    <div class="figcaption-btn">
+                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy02.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
+                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/Taxonomy02.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        
+                                        <small>Differed taxonomic assignments</small>
+                                    </div>
+                                </div>
+                            </div>                        
+                    </div>
+                    <div class="mix col-lg-3 col-md-3 col-sm-6" data-cat="5">
+                            <div class="wp-block inverse">
+                                <div class="figure" id="fig32">
+                                    <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/KEGG.barplot.png" class="img-responsive">
+                                    <div class="figcaption bg-base"></div>
+                                    <div class="figcaption-btn">
+                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/KEGG.barplot.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
+                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/KEGG.barplot.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        
+                                        <small>Differed functional categories</small>
+                                    </div>
+                                </div>
+                            </div>                        
+                    </div>
+                    <div class="mix col-lg-3 col-md-3 col-sm-6" data-cat="5">
+                            <div class="wp-block inverse">
+                                <div class="figure" id="fig33">
+                                    <img alt="" src="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/eggNOG.barplot.png" class="img-responsive">
+                                    <div class="figcaption bg-base"></div>
+                                    <div class="figcaption-btn">
+                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/eggNOG.barplot.png" class="btn btn-md btn-b-white theater"><i class="fa fa-plus-circle"></i> Zoom</a>
+                                        <a href="/respiratory_microbial_gene_catalogue/media/{{ project_folder }}/eggNOG.barplot.png" class="btn btn-md btn-b-white" download><i class="fa fa-link"></i> Download</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-9">
+                                        
+                                        <small>Differed functional categories</small>
+                                    </div>
+                                </div>
+                            </div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+
         	</div>    	
         </div>
     </section>
@@ -270,36 +272,35 @@
 <!-- <script src="js/wp.switcher.js"></script> -->
 <!-- <script type="text/javascript" src="js/wp.ga.js"></script> -->
 <!-- <link rel="stylesheet" href="/static/respiratory_microbial_gene_catalogue/css/block.css"> -->
-
 <style>
-/* fluid 5 columns */
-.grid-sizer,
-.grid-item { width: 20%; }
-/* 2 columns wide */
-/*.grid-item--width2 { width: 40%; }*/
+.title{
+    margin-left: 1rem;
+}
 </style>
-</body>
 <script type="text/javascript">
-$( window ).on( "load", function() {
-    $('.grid').masonry({
-      // options
-      itemSelector: '.grid-item',
-      columnWidth: 300,
-      gutter: 15
-    });
-});
-$('.filter').click(function(){
-setTimeout(
-  function() 
-  {
-                $('.grid').masonry({
-      // options
-      itemSelector: '.grid-item',
-      columnWidth: 300,
-      gutter: 15
-    });
-  }, 1000);
-
-});
+// $(window).load(function() {
+//     $("#fig22").css('height',$("#fig21").css('height'));
+//     $("#fig32").css('height',$("#fig31").css('height'));
+//     $("#fig33").css('height',$("#fig31").css('height'));
+// });
+// (function() {
+//     var ev = new $.Event('style'),
+//         orig = $.fn.css;
+//     $.fn.css = function() {
+//         $(this).trigger(ev);
+//         return orig.apply(this, arguments);
+//     }
+// })();
+// $("#fig21").bind('style', function(e) {
+//     alert('a');
+// });
+$('a[href$="comparison"]').click(function(){
+    setTimeout(function(){     
+        // console.log($("#fig21").css('height'));
+        $("#fig22").css('height',$("#fig21").css('height'));
+        $("#fig32").css('height',$("#fig31").css('height'));
+        $("#fig33").css('height',$("#fig31").css('height')); }, 500);    
+})
 </script>
+</body>
 </html>
